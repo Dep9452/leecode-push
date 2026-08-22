@@ -11,7 +11,11 @@ public:
         num=num/10;
         }
         int finalnum=sum+product;
-        return n%finalnum==0;
+        if(n%finalnum==0){
+            return true;}
+            else{
+            return false;
+        }
 
     }
 };
