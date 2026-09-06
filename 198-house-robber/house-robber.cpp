@@ -1,14 +1,19 @@
 class Solution {
 public:
     int rob(vector<int>& nums) {
-        int prev = 0, curr = 0;
+        int prev2 = 0;
+        int prev1 = 0;
 
-        for (int x : nums) {
-            int temp = curr;
-            curr = max(curr, prev + x);
-            prev = temp;
+        for (int money : nums) {
+            int take = prev2 + money;
+            int skip = prev1;
+
+            int current = max(take, skip);
+
+            prev2 = prev1;
+            prev1 = current;
         }
 
-        return curr;
+        return prev1;
     }
 };
