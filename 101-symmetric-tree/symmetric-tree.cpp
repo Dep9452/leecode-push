@@ -9,7 +9,7 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
- class Solution {
+class Solution {
 public:
     bool check(TreeNode* left, TreeNode* right) {
         if (left == NULL && right == NULL)
