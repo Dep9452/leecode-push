@@ -4,9 +4,10 @@ public:
         int mn=prices[0];
         int ans=0;
         for(int i=1;i<prices.size();i++){
-            if(prices[i]<mn) mn=prices[i];
-            else ans=max(ans,prices[i]-mn);
-        }
+            if(prices[i]<mn) 
+            mn=prices[i];
+            else ans=max(ans,prices[i]-mn);}
+
         return ans;
     }
 };
